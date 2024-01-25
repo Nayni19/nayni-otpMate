@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:otp_app/home/room.dart';
 import 'package:otp_app/home/widgets/app_divider.dart';
 import 'package:otp_app/home/widgets/list_tab.dart';
 import 'package:otp_app/home/widgets/vault_tile.dart';
@@ -12,6 +13,7 @@ class Vault extends StatefulWidget {
 
 class _VaultState extends State<Vault> {
   String selectedTab = 'All';
+  List rooms = ['1234','1083','0474','4673','7485'];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,7 +31,7 @@ class _VaultState extends State<Vault> {
             ),
           ),
           padding: const EdgeInsets.all(20.0),
-          child:  Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
@@ -73,15 +75,23 @@ class _VaultState extends State<Vault> {
         ),
         Expanded(
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                for (int i = 0; i < 5; i++) ...[
-                  VaultTile(
-                    onTap: () {},
-                  ),
-                  const AppDivider(),
-                ],
+              child: Column(
+            children: [
+              for (int i = 0; i < rooms.length; i++) ...[
+                VaultTile(
+                  roomId: rooms[i],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Room(roomId: rooms[i]),
+                      ),
+                    );
+                  },
+                ),
+                const AppDivider(),
               ],
+            ],
           )),
         )
       ],

@@ -29,7 +29,7 @@ class _OtpFieldState extends State<OtpField> {
           style: GoogleFonts.poppins(
             fontSize: 18,
           ),
-          contentPadding: EdgeInsets.all(18),
+          contentPadding: const EdgeInsets.all(18),
           textFieldAlignment: MainAxisAlignment.spaceAround,
           outlineBorderRadius: 5,
           fieldStyle: FieldStyle.box,
@@ -37,7 +37,6 @@ class _OtpFieldState extends State<OtpField> {
             backgroundColor: const Color(0xfff3ecf9),
             borderColor: Colors.transparent,
             enabledBorderColor: Colors.transparent,
-            // enabledBorderColor: Color.fromARGB(255, 74, 57, 133),
             errorBorderColor: const Color.fromARGB(255, 111, 30, 24),
             focusBorderColor: const Color.fromARGB(255, 48, 25, 123),
 

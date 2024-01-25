@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         duration: 3000,
         animationDuration: const Duration(milliseconds: 2000),
         nextScreen: const HomePage(),
-        splashIconSize: 300,
+        splashIconSize: 250,
         backgroundColor: const Color(0xff2F004F),
         splashTransition: SplashTransition.scaleTransition,
         pageTransitionType: PageTransitionType.rightToLeft,

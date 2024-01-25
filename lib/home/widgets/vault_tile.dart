@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class VaultTile extends StatelessWidget {
-  const VaultTile({super.key, required this.onTap});
+  const VaultTile({super.key, required this.onTap, required this.roomId});
   final VoidCallback onTap;
+  final String roomId;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class VaultTile extends StatelessWidget {
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
                 ),),
-                Text('780013'),
+                Text(roomId),
                 Spacer(),
                 Icon(
                   Icons.arrow_forward_ios,
